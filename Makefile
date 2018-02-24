@@ -17,12 +17,14 @@ all: clean test publish
 clean:
 	rm -rf dist/
 
+update_readme:
+	pandoc --from=markdown --to=rst --output=README.rst README.md
+
 test:
 	python2 setup.py test
 	python3 setup.py test
 
-publish: clean
-	pandoc --from=markdown --to=rst --output=README.rst README.md
+publish: clean update_readme
 	python2 setup.py bdist_wheel --universal
 	python3 setup.py bdist_wheel --universal
 #	gpg --detach-sign -a dist/*.whl
