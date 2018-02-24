@@ -1,9 +1,3 @@
-.. raw:: html
-
-   <!-- <p align="center">
-     <img width="344" height="225" src="meta/repo-banner-small.png" />
-   </p> -->
-
 |image0| |image1|
 
 |Version| |Python Versions|
