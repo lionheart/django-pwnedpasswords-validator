@@ -42,6 +42,20 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 ```
 
+If you'd like to customize the error message (the default is *"This password has previously appeared in a data breach and should not be used."*), you can pass in an alternate in the `OPTIONS` parameter for the validator.
+
+```python
+AUTH_PASSWORD_VALIDATORS = [
+    ...
+    {
+        'NAME': "django_pwnedpasswords_validator.validation.PwnedPasswordValidator",
+        'OPTIONS': {
+            'error_text': "Your password was found in a data breach.",
+        }
+    }
+]
+```
+
 #### Security Note
 
 No plaintext passwords ever leave your server using django-pwnedpasswords-validator.

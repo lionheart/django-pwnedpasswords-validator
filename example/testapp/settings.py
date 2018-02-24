@@ -101,7 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': "django_pwnedpasswords_validator.validation.PwnedPasswordValidator",
         'OPTIONS': {
-            'error_text': "YO YO YO",
+            'error_text': "Your password was found in a data breach.",
             'anonymous': True
         }
     }
