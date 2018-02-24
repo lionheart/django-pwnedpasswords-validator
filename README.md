@@ -1,7 +1,3 @@
-<!-- <p align="center">
-  <img width="344" height="225" src="meta/repo-banner-small.png" />
-</p> -->
-
 ![](meta/repo-banner-2.png)
 [![](meta/repo-banner-bottom.png)][lionheart-url]
 

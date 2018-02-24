@@ -117,6 +117,12 @@ Authors
 
 `Dan Loewenherz <https://github.com/dlo>`__
 
+See also
+--------
+
+`pwnedpasswords <https://github.com/lionheart/pwnedpasswords>`__, a
+command-line utility and Python library for the Pwned Passwords v2 API.
+
 License
 -------
 
