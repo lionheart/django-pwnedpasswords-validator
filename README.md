@@ -2,7 +2,7 @@
   <img width="344" height="225" src="meta/repo-banner-small.png" />
 </p> -->
 
-![](meta/repo-banner.png?1)
+![](meta/repo-banner-2.png)
 [![](meta/repo-banner-bottom.png)][lionheart-url]
 
 [![Version][version-badge]][pypi-url]
