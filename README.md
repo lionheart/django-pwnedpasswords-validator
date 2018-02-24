@@ -80,6 +80,10 @@ Special thanks to [Troy Hunt](https://www.troyhunt.com) for collecting this data
 
 [Dan Loewenherz](https://github.com/dlo)
 
+## See also
+
+[pwnedpasswords](https://github.com/lionheart/pwnedpasswords), a command-line utility and Python library for the Pwned Passwords v2 API.
+
 ## License
 
 Apache License, Version 2.0. See [LICENSE](LICENSE) for details.
