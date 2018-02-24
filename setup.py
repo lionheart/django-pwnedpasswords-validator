@@ -26,7 +26,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
-metadata_filename = "django-pwnedpasswords-validator/metadata.py"
+metadata_filename = "django_pwnedpasswords_validator/metadata.py"
 metadata = runpy.run_path(metadata_filename)
 
 with open(os.path.join(os.path.dirname(__file__), "README.rst")) as file:
