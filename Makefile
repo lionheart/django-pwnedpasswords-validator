@@ -21,11 +21,11 @@ update_readme:
 	pandoc --from=markdown --to=rst --output=README.rst README.md
 
 test:
-	python2 setup.py test
+	python2.7 setup.py test
 	python3 setup.py test
 
 publish: clean update_readme
-	python2 setup.py bdist_wheel --universal
+	python2.7 setup.py bdist_wheel --universal
 	python3 setup.py bdist_wheel --universal
 #	gpg --detach-sign -a dist/*.whl
 	twine upload dist/*
