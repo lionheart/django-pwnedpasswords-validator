@@ -32,4 +32,4 @@ class PwnedPasswordValidator(object):
             raise ValidationError(_(self.error_text), code="password_is_pwned")
 
     def get_help_text(self):
-        return  _("Your password has previously appeared in a data breach and should never be used.")
+        return  _("Your password can't have appeared in a data breach.")
