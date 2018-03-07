@@ -73,7 +73,7 @@ setup(
     name='django-pwnedpasswords-validator',
     package_data={'': ['LICENSE', 'README.rst']},
     packages=['django_pwnedpasswords_validator'],
-    url="https://github.com/lionheart/django-pwnedpasswords-validator/tarball",
+    url="https://github.com/lionheart/django-pwnedpasswords-validator",
     download_url="https://github.com/lionheart/django-pwnedpasswords-validator/tarball/{}".format(metadata['__version__']),
     version=metadata['__version__'],
 )
