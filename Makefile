@@ -12,21 +12,36 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-all: publish
+# Usage: make VERSION=0.1.2
+
+METADATA_FILE := $(shell find . -name "metadata.py" -depth 2)
+
+all: clean test publish
 
 clean:
 	rm -rf dist/
 
+test:
+	python setup.py test
+
 update_readme:
 	pandoc --from=markdown --to=rst --output=README.rst README.md
 
-test:
-	python2.7 setup.py test
-	python3 setup.py test
+update_version:
+	sed -i "" "s/\(__version__[ ]*=\).*/\1 \"$(VERSION)\"/g" $(METADATA_FILE)
+	git add .
+	# - ignores errors in this command
+	-git commit -m "bump version to $(VERSION)"
+	# Delete tag if already exists
+	-git tag -d $(VERSION)
+	-git push origin master :$(VERSION)
+	git tag $(VERSION)
+	git push origin master
+	git push --tags
 
-publish: clean update_readme
-	python2.7 setup.py bdist_wheel --universal
+publish: clean update_readme update_version
+	python setup.py bdist_wheel --universal
 	python3 setup.py bdist_wheel --universal
-#	gpg --detach-sign -a dist/*.whl
+	gpg --detach-sign -a dist/*.whl
 	twine upload dist/*
 
