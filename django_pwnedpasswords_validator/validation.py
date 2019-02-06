@@ -27,7 +27,7 @@ class PwnedPasswordValidator(object):
         self.error_text = error_text
 
     def validate(self, password, user=None):
-        count = pwnedpasswords.check(password, anonymous=self.anonymous)
+        count = pwnedpasswords.check(password, anonymous=self.anonymous, plain_text=True)
         if count > 0:
             raise ValidationError(_(self.error_text), code="password_is_pwned")
 
